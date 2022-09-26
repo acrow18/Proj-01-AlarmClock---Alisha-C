@@ -38,21 +38,13 @@ namespace Proj_01_AlarmClock___Alisha_C
         /// </summary>
         public bool isAdd;
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void uxSoundComboBoxBind() 
-        {
-            List<AlarmSound> soundList = Enum.GetValues(typeof(AlarmSound)).OfType<AlarmSound>().ToList();
-            uxSound.DataSource = soundList;
-        }
-
         //different constructors for different cases
 
         public AddAndEditAlarm()
         {
             InitializeComponent();
+            string[] sounds = System.Enum.GetNames(typeof(AlarmSound));
+            uxSound.DataSource = sounds;
         }
 
         /// <summary>
@@ -64,6 +56,8 @@ namespace Proj_01_AlarmClock___Alisha_C
             addAndEditAlarmForm = form;
             isAdd = true;
             InitializeComponent();
+            string[] sounds = System.Enum.GetNames(typeof(AlarmSound));
+            uxSound.DataSource = sounds;
         }
 
         /// <summary>
@@ -76,6 +70,8 @@ namespace Proj_01_AlarmClock___Alisha_C
             addAndEditAlarmForm = form;
             isAdd = false;
             InitializeComponent();
+            string[] sounds = System.Enum.GetNames(typeof(AlarmSound));
+            uxSound.DataSource = sounds;
         }
 
 
