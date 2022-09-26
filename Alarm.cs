@@ -33,6 +33,11 @@ namespace Proj_01_AlarmClock___Alisha_C
         public Status CurrentStatus;
 
         /// <summary>
+        /// Current sound of alarm
+        /// </summary>
+        public AlarmSound CurrentSound;
+
+        /// <summary>
         /// Snooze time
         /// </summary>
         public DateTime snoozeTime;

@@ -34,6 +34,11 @@ namespace Proj_01_AlarmClock___Alisha_C
         public Status currentStatus;
 
         /// <summary>
+        /// Current sound of alarm
+        /// </summary>
+        public AlarmSound currentSound;
+
+        /// <summary>
         /// Checking if an alarm is being added
         /// </summary>
         public bool isAdd;
@@ -139,6 +144,39 @@ namespace Proj_01_AlarmClock___Alisha_C
         private void uxCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// Checks which sound is selected
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">e</param>
+        private void uxSound_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (uxSound.SelectedItem.ToString().Equals("Radar")) 
+            {
+                currentSound = AlarmSound.Radar;
+            }
+
+            if (uxSound.SelectedItem.ToString().Equals("Beacon"))
+            {
+                currentSound = AlarmSound.Beacon;
+            }
+
+            if (uxSound.SelectedItem.ToString().Equals("Chimes"))
+            {
+                currentSound = AlarmSound.Chimes;
+            }
+
+            if (uxSound.SelectedItem.ToString().Equals("Circuit"))
+            {
+                currentSound = AlarmSound.Circuit;
+            }
+
+            if (uxSound.SelectedItem.ToString().Equals("Reflection"))
+            {
+                currentSound = AlarmSound.Reflection;
+            }
         }
     }
 }

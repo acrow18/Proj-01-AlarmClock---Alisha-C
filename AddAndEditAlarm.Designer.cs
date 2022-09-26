@@ -84,6 +84,7 @@ namespace Proj_01_AlarmClock___Alisha_C
             this.uxSound.Name = "uxSound";
             this.uxSound.Size = new System.Drawing.Size(83, 24);
             this.uxSound.TabIndex = 0;
+            this.uxSound.SelectedIndexChanged += new System.EventHandler(this.uxSound_SelectedIndexChanged);
             // 
             // AddAndEditAlarm
             // 
