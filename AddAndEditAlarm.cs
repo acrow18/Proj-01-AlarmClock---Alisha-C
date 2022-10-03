@@ -103,14 +103,14 @@ namespace Proj_01_AlarmClock___Alisha_C
             //setting a new Alarm
             if (isAdd == true)
             {
-                this.addAndEditAlarmForm.AddAlarm(currentTime, uxOn.Checked);
+                this.addAndEditAlarmForm.AddAlarm(currentTime, uxOn.Checked, currentSound);
                 this.Close();
             }
 
 
             else 
             {
-                this.addAndEditAlarmForm.EditAlarm(currentTime, uxOn.Checked);
+                this.addAndEditAlarmForm.EditAlarm(currentTime, uxOn.Checked, currentSound);
                 this.Close();
             }
         }

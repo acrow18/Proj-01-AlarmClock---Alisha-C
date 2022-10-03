@@ -31,7 +31,7 @@ namespace Proj_01_AlarmClock___Alisha_C
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            /*
+            
             ///model
             Model model = new Model();
 
@@ -43,13 +43,13 @@ namespace Proj_01_AlarmClock___Alisha_C
 
             //view 2
             AddAndEditAlarm addAndEditAlarm = new AddAndEditAlarm();
-            */
+            
 
-            Application.Run(new Alarm501());
-            //addAndEditAlarm.SetInputHandlerForAddAndEdit(controller.handleEvents);
-            //controller.SetObserver(model.DisplayState);
+            //Application.Run(new Alarm501());
+            addAndEditAlarm.SetInputHandlerForAddAndEdit(controller.handleEvents);
+            controller.SetObserver(model.DisplayState);
 
-            //Application.Run(alarm);
+            Application.Run(alarm);
            
         }
     }

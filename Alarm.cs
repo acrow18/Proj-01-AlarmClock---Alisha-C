@@ -49,11 +49,13 @@ namespace Proj_01_AlarmClock___Alisha_C
         /// <param name="minutes">Minutes of alarm</param>
         /// <param name="hours">Hour of alarm</param>
         /// <param name="isOn">Checks if timer is running</param>
-        public Alarm(int hours, int minutes, int seconds, bool isOn)
+        /// <param name ="sound">Sound of timer</param>
+        public Alarm(int hours, int minutes, int seconds, bool isOn, AlarmSound sound)
         {
             alarmTime = DateTime.Now;
             TimeSpan howMuchTime = new TimeSpan(hours, minutes, seconds);
             alarmTime = alarmTime.Date + howMuchTime;
+            CurrentSound = sound;
 
             if (isOn == true)
             {
@@ -62,10 +64,10 @@ namespace Proj_01_AlarmClock___Alisha_C
 
             else
             {
-                CurrentStatus = Status.Stopped;
+                CurrentStatus = Status.NotRunning;
             }
         }
-        
+
         /// <summary>
         /// Used to set observer delegate
         /// </summary>
